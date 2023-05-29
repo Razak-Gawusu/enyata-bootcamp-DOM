@@ -2,10 +2,22 @@
     box-sizing: border-box;
 }
 
+body{
+    width: 80%;
+    margin: auto;
+}
 
+.error{
+    color: red;
+    display: none;
+}
 
 h1{
     font-size: 25px;
+}
+
+#records{
+    font-size: 18px;
 }
 
 .form{

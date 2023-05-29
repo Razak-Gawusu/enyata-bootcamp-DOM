@@ -9,7 +9,7 @@
 
 <style>
     button{
-        padding: 20px 60px;
+        padding: 10px 30px;
         font-size: 20px;
     }
 </style>
@@ -17,12 +17,23 @@
     <div>
         <button data-color="red">Red</button>
         <button data-color="blue">Blue</button>
-        <button data-color="green">green</button>
+        <button data-color="purple">Purple</button>
+        <button data-color="yellow">Yellow</button>
+        <button data-color="pink">Pink</button>
+        <button data-color="green" data-serect='true'>green</button>
     </div>
 
 
     <script>
-       
+      const buttons = document.querySelectorAll('button')
+
+      buttons.forEach(button => {
+        button.addEventListener('dblclick',function(){
+        const body = document.querySelector('body');
+        body.style.backgroundColor = this.getAttribute('data-color')
+      })
+      })
+
     </script>
 </body>
 </html>

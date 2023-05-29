@@ -13,6 +13,7 @@
             Enyata Bootcamp Records
         </h1>
         <form action="">
+            <p class="error">Error, can't submit empty fields</p>
             <div class="form--group">
                 <input type="text" name="name" id="name" placeholder="name">
                 <input type="text" name="email" id="email" placeholder="email">
@@ -24,9 +25,9 @@
 
     <div>
         <h1>Records</h1>
-        <div id="records">
+        <ol id="records">
             
-        </div>
+        </ol>
     </div>
 
     <script>
@@ -34,20 +35,25 @@
         const name = document.querySelector('#name')
         const email = document.querySelector('#email')
         const records = document.querySelector('#records')
+        const error = document.querySelector('.error')
 
-        form.addEventListener('submit', (e) => {
+        function onSubmit (e) {
             e.preventDefault()
+
             if(name.value === '' || email.value === ''){
                 console.log('not submitting...')
-                return
+                error.style.display = 'block'
+                return   
             }
 
-            const item = document.createElement('p')
+            const item = document.createElement('li')
 
-            item.textContent = name.value + ' ' + email.value
+            item.textContent = name.value + ' --- ' + email.value
             records.append(item)
+        }
+        
 
-        })
+        form.addEventListener('submit', onSubmit)
 
         
     </script>
