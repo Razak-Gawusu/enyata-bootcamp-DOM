@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+}
+
+
+
+h1{
+    font-size: 25px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 400px;
+}
+
+.form--group{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input{
+    padding: 10px;
+    font-size: 18px;
+}
+
+button{
+    padding: 10px 40px;
+    margin-top: 20px;
+    font-size: 18px;
+}

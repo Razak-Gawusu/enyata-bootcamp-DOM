@@ -38,6 +38,19 @@
             gap: 10%;
            
         }
+        .child5{
+            background-color: red;
+            width: 50%;
+            height: 100%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 40px;
+            gap: 10%;
+           
+        }
     </style>
 </head>
 <body>
@@ -46,16 +59,40 @@
     <div id="grandparent">
         <div class="parent">
             <div class="child">1</div>
-            <div class="child">2</div>   
+            <div class="child">2</div> 
         </div>
-        <div class="parent">
+        <div class="parent" id="parent2">
             <div class="child">3</div>
-            <div class="child">4</div>
+            <div class="child" id="child4">4</div>
         </div>
    </div>
     <script>
-       
+        // const otherdiv = document.createElement('div')
+        // otherdiv.textContent = '5'
+        // console.log(otherdiv)
 
+        
+        // const heading2 = document.querySelector('#heading2')
+
+        // body.insertBefore(otherdiv, heading2)
+
+        // const child5 = document.createElement('div')
+        // child5.textContent = '5'
+        
+        // child5.setAttribute('class', 'child5')
+    
+        // const parent = document.querySelector('.parent')
+        // parent.append(child5)
+
+        // const body = document.querySelector('body');
+
+        // const grandparent = document.querySelector('#grandparent');
+        // grandparent.insertBefore(document.querySelector('.parent'), document.querySelector('#parent2'))
+
+        const grandparent = document.querySelector('#grandparent')
+        const parent = document.querySelectorAll('.parent')
+
+        grandparent.insertBefore(parent[1], parent[0])
     </script>
 </body>
 </html>
